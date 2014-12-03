@@ -2,42 +2,36 @@ package com.springapp.mvc;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.ui.Model;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.util.HtmlUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathFactory;
 
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
 
-import java.io.File;
 import java.io.StringReader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 @Controller
 public class EventController {
 
-    @RequestMapping(value="/event", method=RequestMethod.GET)
+    @RequestMapping(value="/event/create", method=RequestMethod.GET)
     public ModelAndView event() {
-        return new ModelAndView("event", "command", new Event());
+        return new ModelAndView("event/create", "command", new Event());
+    }
+
+    @RequestMapping(value="/event/list", method = RequestMethod.GET)
+    public String printWelcome(ModelMap model) {
+        return "event/list";
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)

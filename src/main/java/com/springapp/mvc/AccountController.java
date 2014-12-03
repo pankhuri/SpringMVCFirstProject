@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 
 @Controller
-//@RequestMapping("/account")
 public class AccountController {
 
-    @RequestMapping(value="/account", method=RequestMethod.GET)
+    @RequestMapping(value="/account/dashboard", method=RequestMethod.GET)
     public String dashboard() {
         return "dashboard";
     }

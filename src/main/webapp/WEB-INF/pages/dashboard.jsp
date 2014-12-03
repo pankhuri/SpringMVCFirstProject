@@ -1,9 +1,10 @@
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="resources/css/application.css" rel="stylesheet"/>
-<link href="resources/css/bootstrap.css" rel="stylesheet"/>
-<link href="resources/css/bootstrap-responsive.css" rel="stylesheet"/>
-<script src="resources/javascripts/jquery-2.1.min.js"></script>
+<link href="../resources/css/site.css" rel="stylesheet"/>
+<link href="../resources/css/style.css" rel="stylesheet"/>
+<link href="../resources/css/bootstrap.css" rel="stylesheet"/>
+<link href="../resources/css/bootstrap-responsive.css" rel="stylesheet"/>
+<script src="../resources/javascripts/jquery-2.1.min.js"></script>
 
 <html>
 <body>
@@ -17,12 +18,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#/Account/dashboard" class="brand">
-                        <img src="resources/img/logo.png"></a>
+                    <a href="/account/dashboard" class="brand">
+                        <img src="../resources/img/logo.png"></a>
                     <div class="nav-collapse collapse">
                     <div class="nav-collapse">
                         <ul class="nav pull-right menus">
-                            <li rel="events"><a href="#Event/list" >Events</a></li>
+                            <li rel="events"><a href="/event/list" >Events</a></li>
                             <li rel="devices"><a href="#Device/List">Devices</a></li>
                             <li rel="products"><a href="#Product/List">Products</a></li>
                             <li><a href="#">Rules</a></li>
