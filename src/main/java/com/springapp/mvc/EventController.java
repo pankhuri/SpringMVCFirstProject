@@ -30,7 +30,7 @@ public class EventController {
     }
 
     @RequestMapping(value="/event/list", method = RequestMethod.GET)
-    public String printWelcome(ModelMap model) {
+    public String list(ModelMap model) {
         return "event/list";
     }
 

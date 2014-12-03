@@ -5,6 +5,7 @@ com/springapp/mvc/AccountController.class
 com/springapp/mvc/HomeController.class
 com/springapp/mvc/Person.class
 com/springapp/mvc/HelloController.class
+com/springapp/mvc/DeviceController.class
 com/springapp/mvc/PersonDAO.class
 com/springapp/mvc/EventController.class
 com/springapp/mvc/dao/EventDAO.class
