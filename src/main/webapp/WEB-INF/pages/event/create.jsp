@@ -68,12 +68,13 @@
 
                     <h1><span class="icons"></span>Create Event
                     </h1>
-                    <div class="create_event">
+                    <form:form method="POST" action="/SpringMVCProject/create" htmlEscape="true">
+                        <div class="create_event">
                         <div class="form-horizontal">
                             <div class="control-group">
                                 <label class="control-label" for="inputEmail">Name</label>
                                 <div class="controls">
-                                    <input type="text" id="inputEmail" placeholder="Enter Name" class="input-xxlarge">
+                                    <form:input path="name" id="inputEmail" placeholder="Enter Name" class="input-xxlarge" />
                                     <!-- validations required-->
 
                                 </div>
@@ -92,7 +93,7 @@
                             <div class="control-group">
                                 <label class="control-label" for="inputPassword">Sample XML</label>
                                 <div class="controls">
-                                    <textarea class="input-xxlarge" placeholder = "Enter Description"></textarea>
+                                    <form:textarea path="xmlFormat" class="input-xxlarge" placeholder = "Enter Description" />
                                 </div>
 
                                 <div class="checkbox extract-info">
@@ -171,7 +172,7 @@
                                                 </td>
                                                 <td align="center"><a href="javascript:void(0)" onclick="DeletePropertyRow(this)" class="rowdel"></a></td>
                                             </tr>
-                                            *@
+
 
                                             </tbody>
                                         </table>
@@ -185,7 +186,7 @@
                             </div>
                         </div>
                     </div>
-                    }
+                    </form:form>
                 </div>
             </div>
             <div id="clone" style="display: none">
